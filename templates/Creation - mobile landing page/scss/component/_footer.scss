@@ -1,0 +1,77 @@
+
+
+.footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    background-color: #00073A;
+    &_logo{
+        font-family: $ff-heading;
+        font-size: 18px;
+        font-weight: 500;
+        color: #e8e8fd;
+    }
+    & a, p {
+        color: #E6E6FF;
+    }
+    &-content{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+
+        @include respond(phone){
+            flex-direction: column;
+        }
+
+        &-badges{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            & img{
+                width: 100%;
+                @include respond(phone){
+                    width: 100px;
+                }
+            }
+        }
+
+    }
+    &_nav{
+        margin-top: 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    &_icons{
+        margin-top: 16px;
+        display: flex;
+        gap: 36px;
+        & img{
+            cursor: pointer;
+            transition: .15s ease-in;
+
+            &:hover{
+                transform: translateY(-2px);
+            }
+        }
+    }
+    &_divider{
+        width: 90%;
+        margin:24px auto;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(192, 204, 218, 0.01) 0%, rgba(192, 204, 218, 0.2) 50.38%, rgba(192, 204, 218, 0.01) 100%);
+    }
+    &-copyright{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+}

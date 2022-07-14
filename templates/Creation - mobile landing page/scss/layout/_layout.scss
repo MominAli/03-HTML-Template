@@ -1,0 +1,279 @@
+// -------------- header --------------//
+.hero{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(248.66deg, #FFF1F1 0%, #E9F8FB 100%);
+    
+    @include respond(tab-port){
+        height: 100vh;
+    }
+    &-container{
+        margin: 0 auto;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+        
+        @include respond(tab-land){
+            width: 90%;
+        }
+    }
+    &-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &-img{
+        margin-top: 36px;
+        width: 100%;
+        & img{
+           width: 100%;
+        }
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+    
+}
+
+// -------------- Brands --------------//
+.brands{
+    position: relative;
+    padding: 48px 0;
+    width: 80%;
+    margin:0 auto;
+    @include respond(tab-land){
+        width: 90%;
+    }
+
+    &_divider{
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+    }
+}
+.brand{
+    padding: 36px 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 8vw;
+    
+    @include respond(tab-land){
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(phone){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    & img{
+        filter: contrast(60%);
+        transition: all .125s ease-in;
+        &:hover{
+            filter: contrast(100%);
+        }
+    }
+}
+
+// -------------- Feature --------------//
+.feature{
+    width: 80%;
+    margin: 0 auto;
+    padding: 48px 0;
+    @include respond(tab-land){
+        width: 90%;
+    }
+    @include respond(phone){
+        padding: 16px 0;
+    }
+
+    &-wrapper{
+        padding: 48px 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+        @include respond(tab-land){
+            width: 90%;
+        }
+        @include respond(phone){
+            padding: 0 0;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+    &-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        margin: 16px 0;
+    }
+}
+
+// -------------- Showcase --------------//
+.showcase{
+    width: 80%;
+    margin: 0 auto;
+    padding: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    @include respond(tab-land){
+        width: 90%;
+    }
+    @include respond(tab-port){
+        width: 90%;
+        flex-direction: column;
+    }
+
+    &-a{
+        & .showcase-content{
+            @include respond(tab-port){
+                order: 2;
+            }
+        }
+        & .showcase-img{
+            @include respond(tab-port){
+                order: 1;
+            }
+        }
+    }
+    &-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &-img{
+        width: 100%;
+        @include respond(tab-land){
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+}
+
+// -------------- Cta --------------//
+.cta{
+    width: 90%;
+    height: 500px;
+    margin: 48px auto;
+    padding: 48px 8vw;
+    padding-top: 96px;
+    background-color: #E6E6FF;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 48px;
+    border-radius: 16px;
+    overflow: hidden;
+    @include respond(tab-land){
+        height: 600px;
+    }
+    @include respond(tab-port){
+        height: auto;
+        flex-direction: column;
+        margin: 16px auto;
+        padding-top: 10vw;
+    }
+
+    &-content{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &_badges{
+        display: flex;
+        gap: 12px;
+        & img{
+            width: 100%;
+            @include respond(phone){
+                width: 100px;
+            }
+        }
+    }
+    &_img{
+        width: 100%;
+    }
+}
+
+// -------------- Accordian --------------//
+.accordian {
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 48px 0;
+    @include respond(phone){
+        padding: 16px 0;
+    }
+
+    &-items{
+        margin:36px 0;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        flex-direction: column;
+    }
+    & h4, p{
+        width: 90%;
+    }
+
+    &-content{
+        margin-top: 12px;
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        transition:0.25s ease-in;
+    }
+    &-item.active &-content{
+        height: auto;
+    }
+    &-item.active  &_toggle img{
+        transform: rotate(0);
+    }
+    &-item{
+        padding: 8px 0;
+        position: relative;
+    }
+    &_bottom_line{
+        width: 100%;
+        height: 1px; 
+        // background-color: #334E68;
+        // opacity: .1;
+        background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.3) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+        margin: 12px 0;
+        margin-top: 20px;
+    }
+    &_toggle{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 100%;
+        & img{
+            cursor: pointer;
+            padding: 8px;
+            transform: rotate(180deg);
+            transition: all 0.25s ease-in;
+        }
+    }
+}

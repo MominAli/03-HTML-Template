@@ -1,0 +1,63 @@
+.contact{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(251, 251, 251);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &-map{
+        outline: 0;
+        border: 1px solid #DCDCE4;
+        height: 650px;
+        flex: 1;
+        @include respond(tab-land){
+            display: none;
+        }
+    }
+    &-content{
+        flex: 1;
+        padding: 36px 24px;
+        margin: 0 auto;
+    }
+    & .form{
+        width: 100%;
+        padding-top: 48px;
+
+        &_control{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        &_control-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 0;
+            @include respond(phone){
+                display: block;
+            }
+        }
+        &_label{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 4px;
+        }
+        &_input{
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 8px;
+            border: 1px solid #DCDCE4;
+            border-radius: 4px;
+            padding: 6px 16px;
+
+            &:focus {
+                outline: 0;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+
+}

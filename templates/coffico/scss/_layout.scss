@@ -1,0 +1,299 @@
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F2DED4;
+
+    & .logo {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 40px;
+        font-size: 1.8rem;
+        color: #FF8383;
+        font-family: $ff-sourcepro;
+        font-style: italic;
+
+        @include respond(phone) {
+            padding-top: 20px;
+        }
+    }
+
+    &-container {
+        width: 80%;
+        padding: 40px 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    &-img {
+        margin-top: -50px;
+
+        @include respond(tab-port) {
+            margin-top: 0;
+        }
+
+
+        & img {
+            width: 500px;
+
+            @include respond(tab-land) {
+                width: 480px;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-btns {
+        display: flex;
+        gap: 25px;
+    }
+}
+
+// section - feature
+
+.feature {
+    width: 100%;
+    background-color: #EFEFEF;
+    padding: 30px 0;
+
+    &-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    &-right {
+        width: 100%;
+
+        &-points {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+        }
+
+        &-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+
+            & img {
+                width: 36px;
+                height: 36px;
+
+                @include respond(phone) {
+                    margin-top: 10px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}
+
+// section - showcase
+
+.showcase {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #fff;
+
+    &-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+    }
+
+    &-img {
+        width: 100%;
+
+        & img {
+            width: 600px;
+
+            @include respond(tab-land) {
+                max-width: 500px;
+                width: 100%;
+            }
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+}
+
+// testimonial
+
+.testimonial {
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    background-color: #EFEFEF;
+
+    &-container {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+    }
+
+    .slider {
+        position: relative;
+        display: none;
+
+        &.active {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-direction: column;
+        }
+
+        &-img {
+            animation: scale-up-center .5s ease-in;
+        }
+
+        & .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            & img {
+                width: 24px;
+
+                @include respond(phone) {
+                    width: 18px;
+                }
+            }
+        }
+
+        &-heading {
+            font-style: italic;
+            text-align: center;
+            color: #505050;
+            font-weight: normal;
+            font-size: 32px;
+            width: 80%;
+
+            @include respond(phone) {
+                font-size: 24px;
+                width: 100%;
+            }
+        }
+    }
+
+    &-btn {
+        position: absolute;
+        transition: all 0.2s;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        @include respond(phone) {
+            transform: scale(0.6);
+        }
+    }
+
+    &-left {
+        top: 50%;
+        left: 0;
+
+        @include respond(phone) {
+            left: -50px;
+        }
+    }
+
+    &-right {
+        top: 50%;
+        right: 0;
+
+        @include respond(phone) {
+            right: -50px;
+        }
+    }
+}
+
+// section - cta
+
+.cta {
+    width: 100%;
+    padding: 30px;
+    background: #F2DED4;
+
+    &-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+.footer {
+    padding-top: 60px;
+    text-align: center;
+}

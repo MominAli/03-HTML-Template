@@ -1,0 +1,108 @@
+// typography
+.heading-primary{
+    font-family: $ff-sourcepro;
+    font-size: 64px;
+    color: #373737;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @include respond(tab-land){
+        font-size: 52px;
+    }
+    @include respond(tab-port){
+        font-size: 48px;
+    }
+    @include respond(phone){
+        font-size: 42px;
+    }
+}
+.primary-text{
+    font-family: $ff-sourcepro;
+    font-size: 18px;
+    color: #373737;
+    line-height: 1.7;
+    width: 80%;
+}
+.heading-secondary{
+    font-family: $ff-sourcepro;
+    font-size: 48px;
+    color: #3d3d3d;
+    font-weight: 600;
+    @include respond(tab-land){
+        font-size: 42px;
+    }
+    @include respond(tab-port){
+        font-size: 40px;
+    }
+    @include respond(phone){
+        font-size: 32px;
+    }
+}
+.text-paragraph{
+    font-family: $ff-sourcepro;
+    font-size: 18px;
+    color: #373737;
+    line-height: 1.7;
+}
+
+// buttons
+.btn{
+    position: relative;
+    display: inline-block;
+    font-family: $ff-sourcepro;
+    
+    &:focus{
+        outline: 0;
+    }
+    &:active{
+        outline: 0;
+    }
+
+    &-primary{
+        background: #FF8383;
+        color: #fff;
+        font-weight: bold;
+        width: 150px;
+        padding: 10px;
+        border: 2px solid #FF8383;
+        text-align: center;
+        font-size: 18px;
+        transition: all 0.2s;
+
+        &:hover{
+            background-color: #F2DED4;
+            color: #FF8383;
+        }
+
+        @include respond(phone){
+            font-size: 16px;
+            width: 120px;
+            padding: 8px;
+        }
+    }
+    &-outline{
+        border: 2px solid #FF8383;
+        color: #FF8383;
+        font-weight: bold;
+        width: 150px;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        transition: all 0.2s;
+        
+        &:hover{
+            background-color: #FF8383;
+            color: #fff;
+        }
+
+        @include respond(phone){
+            font-size: 36px;
+        }
+        
+        @include respond(phone){
+            font-size: 16px;
+            width: 120px;
+            padding: 8px;
+        }
+    }
+}

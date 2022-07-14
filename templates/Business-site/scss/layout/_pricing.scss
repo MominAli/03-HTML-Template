@@ -1,0 +1,85 @@
+.pricing{
+    padding-top: 96px;
+    background-color: rgb(255, 255, 255);
+
+    &-container{
+        width: 80%;
+        margin: 0 auto;
+        padding: 48px 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        @include respond(tab-land){
+            width: 90%;
+        }
+    }
+    &_card{
+        position: relative;
+        border-radius: 8px;
+        padding: 24px;
+        padding-top: 32px;
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        border: 1px solid rgba(238, 238, 238, 0.622);
+        transition: all 0.15s ease-in;
+        overflow: hidden;
+
+        &:nth-of-type(2){
+            border: 1px solid rgba($primary-color, 0.622);
+            transform: translateY(0) scale(1.05);
+        }
+
+        &:hover{
+            transform: translateY(-4px) scale(1.05);
+            border: 1px solid rgba($primary-color, 0.622);
+
+        }
+
+        &__divider{
+            margin: 16px 0;
+            background-color: rgba(#121127, .12);
+            opacity: 0.3;
+            height: 1px;
+            width: 100%;
+        }
+
+        &__heading{
+            padding-bottom: 12px;
+            & span{
+                font-size: 14px;
+                font-weight: 400;
+                color: #707070;
+            }
+        }
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 24px;
+
+            & li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+
+                & img{
+                    width: 24px;
+                }
+            }
+        }
+        & .btn-outline{
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+            padding: 8px 0;
+        }
+    }
+}
